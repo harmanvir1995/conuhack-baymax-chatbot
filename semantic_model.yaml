@@ -1,0 +1,124 @@
+name: conuhack_doc
+tables:
+  - name: PATIENT_RECORDS
+    description: This table stores patient records, containing information about each
+      patient's insurance, medical history, and treatment plans, including visit dates,
+      diagnoses, treatments, and follow-up dates, as well as any relevant notes from
+      the doctor.__
+    base_table:
+      database: CONUHACK
+      schema: CLINICAL_DATA
+      table: PATIENT_RECORDS
+    dimensions:
+      - name: INSURANCE_ID
+        synonyms:
+          - '  '
+        description: Unique identifier for each patient's insurance provider.__
+        expr: INSURANCE_ID
+        data_type: TEXT
+        sample_values:
+          - EMIL37492081
+          - MICH83910472
+          - OLIV10598347
+          - AVAW78235461
+          - BENJ56473829
+      - name: PATIENT_NAME
+        synonyms:
+          - '  '
+        description: Patient Name__
+        expr: PATIENT_NAME
+        data_type: TEXT
+        sample_values:
+          - Emily Carter
+          - Michael Thompson
+          - Olivia Hernandez
+          - William Robinson
+          - Ava Walker
+      - name: DOCTOR_NAME
+        synonyms:
+          - '  '
+        description: The name of the doctor who treated the patient.__
+        expr: DOCTOR_NAME
+        data_type: TEXT
+        sample_values:
+          - Dr. Andrew Kim
+          - Dr. Benjamin Lee
+          - Dr. Emily Johnson
+          - Dr. Daniel Smith
+          - Dr. Ava Walker
+      - name: DIAGNOSIS
+        synonyms:
+          - '  '
+        description: List of patient diagnoses.__
+        expr: DIAGNOSIS
+        data_type: TEXT
+        sample_values:
+          - Hypertension
+          - Type II Diabetes
+          - Asthma
+          - Migraine
+          - Seasonal Allergies
+      - name: TREATMENT
+        synonyms:
+          - '  '
+        description: Treatment plans for patients.__
+        expr: TREATMENT
+        data_type: TEXT
+        sample_values:
+          - ACE inhibitors
+          - Metformin and diet adjustments
+          - Inhalers and trigger avoidance
+          - Pain relievers and rest
+          - Antihistamines
+      - name: VISIT_NOTES
+        synonyms:
+          - '  '
+        description: This column contains visit notes from patient records, detailing
+          instructions, advice, and guidance provided to patients on various health-related
+          topics, including medication adherence, diet, exercise, and disease management.__
+        expr: VISIT_NOTES
+        data_type: TEXT
+        sample_values:
+          - Patient advised to monitor blood pressure daily. Detailed instructions
+            on diet, exercise, and medication adherence were provided. A follow-up
+            will assess blood pressure trends and consider adjustments in therapy.
+          - Discussed the importance of regular blood sugar monitoring and lifestyle
+            modifications. The patient received comprehensive guidance on nutrition,
+            exercise, and medication timing. A blood test is scheduled at follow-up
+            to evaluate glycemic control.
+          - Reviewed proper inhaler technique and provided an in‐depth asthma action
+            plan. The patient was advised to avoid environmental triggers and keep
+            a daily symptom diary. Follow-up is scheduled to assess lung function
+            and control of symptoms.
+          - Patient was advised to maintain a headache diary and adhere to a structured
+            medication schedule. Detailed discussion on identifying migraine triggers
+            and stress management techniques was provided. Follow-up will review headache
+            frequency and medication effectiveness.
+          - Instructed on allergen avoidance techniques and proper use of antihistamines.
+            Extended counseling on environmental control measures and symptom recognition
+            was provided. The patient is to return for evaluation of allergy control.
+    time_dimensions:
+      - name: VISIT_DATE
+        synonyms:
+          - '  '
+        description: Date of patient visits.__
+        expr: VISIT_DATE
+        data_type: DATE
+        sample_values:
+          - '2024-08-05'
+          - '2024-08-10'
+          - '2024-08-15'
+          - '2024-08-20'
+          - '2024-08-25'
+      - name: FOLLOW_UP_DATE
+        synonyms:
+          - '  '
+        description: Date of scheduled follow-up appointments for patients.__
+        expr: FOLLOW_UP_DATE
+        data_type: DATE
+        sample_values:
+          - '2025-02-02'
+          - '2025-02-15'
+          - '2025-02-20'
+          - '2025-03-02'
+          - '2025-03-05'
