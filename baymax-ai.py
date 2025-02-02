@@ -49,10 +49,81 @@ def reset_session_state():
 def show_header_and_sidebar():
     """Display the header and sidebar of the app."""
     # Set the title and introductory text of the app
-    st.title("DR-AI-Assistance Analyst")
+    # Custom CSS for styling
     st.markdown(
-        "Welcome to Baymax-AI-Assistant Analyst! "
+        """
+        <style>
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color:  #1F7A8C ;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .line {
+            border-top: 2px solid #CD5334;
+            margin: 20px 0;
+        }
+        .image-container {
+            text-align: left;
+            width: 80px;
+            
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
     )
+    
+
+
+    # Create a container with both image and title
+    st.markdown("""
+        <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-container {
+            margin-right: 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        </style>
+        <div class="container">
+            <div class="image-container">
+                <img src="https://clipart-library.com/data_images/134187.jpg" width="300">
+            </div>
+            <div class="title">
+                Baymax Med-AI Assistant 💬
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+
+# Draw a horizontal line
+    st.markdown('<div class="line"></div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    <style>
+    .welcome-text {
+        font-size: 20px;
+        font-weight: bold;
+        color: black
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    </style>
+    <div class="welcome-text">
+        Welcome to Baymax-AI-Assistant Analyst!
+    </div>
+""", unsafe_allow_html=True)
+
+
+
 
     # Sidebar with a reset button
     with st.sidebar:
