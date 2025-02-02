@@ -34,9 +34,3 @@ Baymax AI is an AI-powered assistant that helps doctors by summarizing clinical 
 1. The app queries patient medical data from Snowflake using a SQL query.
 2. It then sends the retrieved data to Cortex AI for analysis.
 3. The results are displayed in the Streamlit frontend for easy visualization.
-
-## License:
-MIT License
-
-## Disclaimer:
-Ensure you configure the proper credentials for Snowflake and Cortex AI before using this application in production.
