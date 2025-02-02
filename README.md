@@ -2,6 +2,10 @@
 
 Baymax AI is an AI-powered assistant that helps doctors by summarizing clinical data, retrieving patient medical history, and using advanced AI tools like Cortex AI for analysis. This application connects to Snowflake for data storage and retrieval and leverages Cortex AI to generate insights.
 
+<img width="1387" alt="UI" src="https://github.com/user-attachments/assets/a2ec2aaf-81e3-4ab1-b8b3-f4abf70dd253" />
+
+
+
 ## Technologies Used:
 - **Snowflake**: Data storage and querying.
 - **Cortex AI**: Clinical data analysis.
